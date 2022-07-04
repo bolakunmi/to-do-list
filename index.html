@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <main style="
+
+    cursor: pointer;
+  "></main>
+  </head>
+  <body
+    style="
+      background: url('cool-background.png');
+      cursor: pointer;
+    "
+  >
+    <div
+      style="
+        margin: 70px auto;
+        width: 400px;
+        height: 550px;
+        background: white;
+        border-radius: 40px;
+        border: 2px solid;
+      "
+    >
+      <br /><br />
+      <div
+        style="
+          background: rgba(128, 128, 128, 0.664);
+          width: 80%;
+          height: 80px;
+          box-shadow: 1px 0px 10px 1px rgb(0 0 0) inset;
+          margin: 0 auto;
+          border-radius: 30px;
+          align-items: end;
+          font-size: 40px;
+          padding: 20px;
+          color: rgb(218, 218, 218);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          overflow: auto;
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+        "
+        class="display"
+      ></div>
+      <br />
+      <div
+        style="
+          display: grid;
+          width: 90%;
+          margin: 0 auto;
+          height: 330px;
+          grid-template-columns: 25% 25% 25% 25%;
+          align-items: stretch;
+          justify-items: stretch;
+          font-size: 40px;
+          justify-content: space-between;
+          color: white;
+        "
+      >
+        <!-- buttons -->
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.808);
+            background: rgba(0, 0, 0, 0.801);
+          "
+          type="button"
+          class="percentage"
+        >
+          %
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.801);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="backspace"
+        >
+          B/S
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(255, 0, 0, 0.664);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="clear_button"
+        >
+          C
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(255, 0, 0, 0.664);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="on_off"
+        >
+          ON/OFF
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.808);
+            background: rgba(0, 0, 0, 0.801);
+          "
+          type="button"
+          class="inverse"
+        >
+          1/X
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.808);
+            background: rgba(0, 0, 0, 0.801);
+          "
+          type="button"
+          class="square"
+        >
+          X<sup>2</sup>
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.801);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="squareroot"
+        >
+          X<sup>1/2</sup>
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.801);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="divide"
+        >
+          /
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="seven"
+        >
+          7
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="eight"
+        >
+          8
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="nine"
+        >
+          9
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.801);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="multiply"
+        >
+          *
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="four"
+        >
+          4
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="five"
+        >
+          5
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="six"
+        >
+          6
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.801);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="subtract"
+        >
+          -
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="one"
+        >
+          1
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="two"
+        >
+          2
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="three"
+        >
+          3
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.801);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="add"
+        >
+          +
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="negative"
+        >
+          +/-
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="zero"
+        >
+          0
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.432);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="decimal"
+        >
+          .
+        </button>
+        <button
+          style="
+            padding: 3px;
+            border-radius: 15px;
+            border-width: 2px;
+            margin: 3px;
+            box-shadow: 0 0 7px 1px rgb(175, 175, 175);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.801);
+            color: rgba(255, 255, 255, 0.808);
+          "
+          type="button"
+          class="equals"
+        >
+          =
+        </button>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
