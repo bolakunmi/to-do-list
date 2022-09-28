@@ -62,6 +62,9 @@ add.addEventListener("click", function () {
   }
   attachbuttons(li);
   dragabout()
+  input.focus()
+  // localStorage.setItem("completed", [..., li]);
+
 });
 
 //highlight selected list
