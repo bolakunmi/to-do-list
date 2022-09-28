@@ -1,150 +1,218 @@
 body {
-    background: rgb(37, 37, 37);
+  background: rgb(37, 37, 37);
 }
 
-*{
-    font-size: 12px;
+* {
+  font-size: 8px;
+}
+button,
+input {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid black;
+}
+
+h4 {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: capitalize;
 }
 
 main {
-    background: rgba(185, 253, 174, 0.897);
-    width: 80%;
-    max-width: 800px;
-    min-width: 400px;
-    margin: 0 auto;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    font-size:  12px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
+  background: rgba(185, 253, 174, 0.897);
+  width: 90%;
+  min-width: 400px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.completed li{
-    background: rgb(118, 139, 122);
-    font-style: italic;
-    margin: 2%;
-    padding:2%;
+.completed li {
+  background: rgb(118, 139, 122);
+  font-style: italic;
+  margin: 2%;
+  padding: 2%;
 }
 
 /* class list for when clicked */
-.completed_clicked{
-    background: rgb(62, 133, 62);
+.completed_clicked {
+  background: rgb(62, 133, 62);
 }
 
-ul button{
-    border-radius: 20px;
-    list-style:georgian ;
-    float: right;
-    border: 1px solid rgb(30, 185, 30);
-    
+ul button {
+  border-radius: 20px;
+  list-style: georgian;
+  float: right;
+  border: 1px solid rgb(30, 185, 30);
+  font-size: 8px;
 }
 
 .pending li {
-    padding: 10px;
-    border-bottom: 2px solid gray;
-    list-style: none;
-    
+  padding: 5px;
+  border-bottom: 2px solid gray;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
 }
 /* .pending li:first-child {
     border-color: grey;
 } */
 
-.animated_small{
-    animation-name: animated_small;
-    animation-duration: 1s;
-    animation-direction: normal;
-    animation-iteration-count: 1;
-
+.animated_small {
+  animation-name: animated_small;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
 }
 
 .completed li {
-    padding: 10px;
-    animation-name: animation;
-    animation-duration: 1s;
-    animation-direction: normal;
-    animation-iteration-count: 1;
-
+  padding: 10px;
+  animation-name: animation;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
 }
 
 .pending button {
-    margin: 5px;
-}
-h4{
-    padding-left: 15px;
+  margin: 5px;
 }
 
-main div{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    
+h4 {
+  padding-left: 15px;
+}
+
+main div {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .completed_button {
-    margin:10px auto;
-    padding:7px;
-    border-radius: 15px;
-    width: 150px;
-    font-size: 14px;
-    background: rgb(74, 255, 83);
-    font-weight: 600;
-    text-transform:uppercase;
+  margin: 10px auto;
+  margin-top: 30px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background: rgb(74, 255, 83);
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-main div input{
-    padding:5px;
-    font-size:12px;
-    width: 200px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-radius:  10px 0 0 10px;
-    text-align:center;
-    background: rgba(255, 255, 255, 0.664);
-    margin-right: 0;
-    border: 0;
-    background: rgb(204, 255, 206);
-} 
+.completed_button:hover,
+.add:hover {
+  background: rgb(17, 158, 24);
+  color: white;
+  transition-duration: 400ms;
+}
 
-main div input:focus{
-    border: 1px solid rgba(157, 255, 165, 0.308);
-    background: rgb(244, 255, 244);
-    border-right: 0;
+main div input {
+  padding: 10px 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px 0 0 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.664);
+  margin-right: 0;
+  border: 0;
+  background: rgb(204, 255, 206);
+}
+
+main div input:focus {
+  border: 1px solid rgba(157, 255, 165, 0.308);
+  background: rgb(244, 255, 244);
+  border-right: 0;
+  outline: none;
+  /* box-shadow: 0px 0px 20px 0px rgb(30, 185, 30); */
+}
+
+/* main div input:focus  .glow_on_focus{
+    box-shadow: 0px 0px 20px 0px red
+} */
+
+.glow_on_focus {
+  width: fit-content;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
 .add {
-    background: rgb(30, 185, 30) ;
-    padding:5px;
-    font-size:12px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-radius: 0px 10px 10px 0;
-    margin-left: 0;
-    border: 1px solid black;
+  background: rgb(30, 185, 30);
+  padding: 5px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 0px 10px 10px 0;
+  margin-left: 0;
+  border: none;
+  text-transform: uppercase;
 }
 
-
+.up,
+.remove {
+  padding: 2px 15px;
+  font-size: inherit;
+  float: right;
+}
 
 @keyframes animation {
   0% {
     display: none;
-   transform: translateX(-70px);
-   display: none;
+    transform: translateX(-70px);
+    display: none;
   }
   100% {
     transform: translateX(0);
     display: block;
   }
-  
 }
 
 @keyframes animated_small {
   0% {
     display: none;
-   transform: translateX(-30px);
-   display: none;
+    transform: translateX(-30px);
+    display: none;
   }
   100% {
     transform: translateX(0);
     display: block;
   }
-  
+}
+
+@media screen and (min-width: 768px) {
+  * {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+  }
+
+  button,
+  input {
+    font-size: 16px;
+  }
 }

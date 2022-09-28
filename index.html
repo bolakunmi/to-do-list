@@ -4,30 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List</title>
+    <title>TO-DO LIST</title>
     <link rel="stylesheet" href="to-do_list.css" />
   </head>
   <body>
     <main>
-      <h2>to-do list</h2>
+      <h2>TO-DO LIST</h2>
       <!-- new list for completed tasks. it becomes grey so it seems unchangable. no
       further functions permittedin this category. -->
       <h4>completed</h4>
-      <ul class="completed">
-        
-
-      </ul>
+      <ul class="completed"></ul>
       <h4>pending...</h4>
       <ul class="pending">
-          
+        <!-- ondragstart="start()" ondragover="dragover()" -->
+        <li draggable="true" >
+          something
+        </li>
+        <li draggable="true" >
+          something2
+        </li>
 
+        <li draggable="true" >
+          something3
+        </li>
       </ul>
-      <div>
+      <div class="glow_on_focus">
         <input type="text" placeholder="new task?" />
-        <button class="add">add</button>
+        <button class="add" type="button">add</button>
       </div>
       <div>
-        <button class="completed_button">completed</button>
+        <button class="completed_button" type="button">completed</button>
       </div>
     </main>
     <script src="to-do_list.js"></script>
